@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will You Be My Valentine? 🐱</title>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <title>Happy Valentine's Day 🌸</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,61 +13,134 @@
         }
 
         body {
-            font-family: 'Quicksand', sans-serif;
-            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 50%, #fd79a8 100%);
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #fef9f3 0%, #fef5ef 100%);
+            background-image: url('img.png'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 20px;
-            overflow-x: hidden;
+            overflow: hidden;
             position: relative;
-        }
-
-        /* Floating paw prints background */
-        .bg-paws {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .bg-paw {
-            position: absolute;
-            font-size: 30px;
-            opacity: 0.2;
-            animation: float-bg 20s infinite ease-in-out;
-        }
-
-        @keyframes float-bg {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-40px) rotate(15deg); }
         }
 
         .container {
             text-align: center;
-            background: linear-gradient(135deg, #fff9e6 0%, #fff5e1 100%);
-            padding: 50px 40px;
-            border-radius: 40px;
-            box-shadow:
-                0 20px 60px rgba(139, 69, 19, 0.2),
-                0 0 0 1px rgba(255, 255, 255, 0.8) inset;
-            max-width: 650px;
+            background: white;
+            padding: 50px 40px 40px 40px;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
             width: 100%;
             position: relative;
             z-index: 10;
-            animation: slideIn 0.6s ease-out;
-            border: 4px solid #d4a574;
+            animation: fadeIn 0.8s ease-out;
         }
 
-        @keyframes slideIn {
+        @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(50px) scale(0.9);
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            color: #2c2c2c;
+            font-size: 3em;
+            margin-bottom: 15px;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            color: #888;
+            margin-bottom: 40px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .flower-display {
+            margin: 40px 0 20px 0;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .single-flower {
+            animation: floatFlower 3s ease-in-out infinite;
+        }
+
+        @keyframes floatFlower {
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        button {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.1em;
+            padding: 18px 40px;
+            border: 2px solid #2c2c2c;
+            background: white;
+            color: #2c2c2c;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 400;
+            transition: all 0.4s ease;
+            letter-spacing: 1px;
+        }
+
+        button:hover {
+            background: #2c2c2c;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .question {
+            font-size: 1.3em;
+            color: #2c2c2c;
+            margin: 30px 0;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        /* Bouquet container */
+        .bouquet-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            animation: bouquetReveal 1.2s ease-out;
+        }
+
+        @keyframes bouquetReveal {
+            from {
+                opacity: 0;
+                transform: translateY(50px) scale(0.8);
             }
             to {
                 opacity: 1;
@@ -75,479 +148,408 @@
             }
         }
 
-        /* Cat ears on container */
-        .cat-ear {
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-left: 40px solid transparent;
-            border-right: 40px solid transparent;
-            border-bottom: 60px solid #d4a574;
-            top: -40px;
+        @keyframes bouquetReveal {
+            from {
+                opacity: 0;
+                transform: translateY(50px) scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
         }
 
-        .cat-ear.left {
-            left: 80px;
-            transform: rotate(-20deg);
-        }
-
-        .cat-ear.right {
-            right: 80px;
-            transform: rotate(20deg);
-        }
-
-        .cat-ear::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-left: 30px solid transparent;
-            border-right: 30px solid transparent;
-            border-bottom: 45px solid #fff9e6;
-            top: 8px;
-            left: -30px;
-        }
-
-        h1 {
-            font-family: 'Pacifico', cursive;
-            color: #8b4513;
-            font-size: 2.8em;
-            margin-bottom: 25px;
-            text-shadow:
-                2px 2px 4px rgba(139, 69, 19, 0.2),
-                0 0 15px rgba(255, 165, 0, 0.3);
-            animation: pulse 2s infinite;
-            line-height: 1.3;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-        }
-
-        .cat-gif-container {
+        .bouquet-wrapper {
             position: relative;
             display: inline-block;
-            margin: 30px auto;
+            min-height: 300px;
         }
 
-        .cat-gif {
-            width: 320px;
-            height: 320px;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow:
-                0 10px 40px rgba(139, 69, 19, 0.3),
-                0 0 0 8px #d4a574,
-                0 0 0 12px rgba(255, 255, 255, 0.8);
-            animation: wiggle 3s infinite ease-in-out;
-            border: 8px solid #fff;
-        }
-
-        @keyframes wiggle {
-            0%, 100% { transform: rotate(-2deg); }
-            50% { transform: rotate(2deg); }
-        }
-
-        /* Paw prints around the gif */
-        .paw {
+        /* Ribbon/Wrap */
+        .bouquet-wrap {
             position: absolute;
-            font-size: 35px;
-            animation: paw-shake 2s infinite;
-            filter: drop-shadow(2px 2px 4px rgba(139, 69, 19, 0.3));
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 150px;
+            background: linear-gradient(135deg, #d4a574 0%, #c9a27a 100%);
+            clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+            z-index: 2;
+            border-radius: 0 0 10px 10px;
+            margin-bottom:20px;
         }
 
-        .paw:nth-child(1) { top: -20px; left: -20px; animation-delay: 0s; }
-        .paw:nth-child(2) { top: -20px; right: -20px; animation-delay: 0.3s; }
-        .paw:nth-child(3) { bottom: -20px; left: -20px; animation-delay: 0.6s; }
-        .paw:nth-child(4) { bottom: -20px; right: -20px; animation-delay: 0.9s; }
-
-        @keyframes paw-shake {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            25% { transform: scale(1.2) rotate(-10deg); }
-            75% { transform: scale(1.2) rotate(10deg); }
+        .ribbon {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 220px;
+            height: 30px;
+            background: linear-gradient(135deg, #ff6b9d 0%, #c94b4b 100%);
+            z-index: 3;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
         }
 
-        .buttons {
-            display: flex;
-            gap: 25px;
-            justify-content: center;
-            margin-top: 40px;
-            flex-wrap: wrap;
-        }
-
-        button {
-            font-size: 1.6em;
-            padding: 18px 50px;
-            border: none;
-            border-radius: 60px;
-            cursor: pointer;
-            font-weight: 700;
-            font-family: 'Quicksand', sans-serif;
-            transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(139, 69, 19, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        button::before {
+        .ribbon::before,
+        .ribbon::after {
             content: '';
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 0;
             width: 0;
             height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
+            border-style: solid;
         }
 
-        button:hover::before {
+        .ribbon::before {
+            left: -15px;
+            border-width: 15px 15px 15px 0;
+            border-color: transparent #c94b4b transparent transparent;
+        }
+
+        .ribbon::after {
+            right: -15px;
+            border-width: 15px 0 15px 15px;
+            border-color: transparent transparent transparent #c94b4b;
+        }
+
+        .flowers-cluster {
+            position: relative;
+            z-index: 1;
+            min-height: 300px;
             width: 300px;
-            height: 300px;
         }
 
-        #yesBtn {
-            background: linear-gradient(135deg, #ff6348 0%, #ff9068 100%);
-            color: white;
-            border: 3px solid #ff7f50;
+        /* Individual flower styles */
+        .flower {
+            position: absolute;
+            bottom: 150px;
+            animation: flowerGrow 0.8s ease-out backwards;
         }
 
-        #yesBtn:hover {
-            background: linear-gradient(135deg, #ff9068 0%, #ff6348 100%);
-            transform: scale(1.15) rotate(-2deg);
-            box-shadow: 0 10px 30px rgba(255, 99, 72, 0.5);
+        @keyframes flowerGrow {
+            from {
+                opacity: 0;
+                transform: scale(0) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
         }
 
-        #noBtn {
-            background: linear-gradient(135deg, #d4a574 0%, #c9a27a 100%);
-            color: #5c4033;
-            border: 3px solid #b8946f;
+        .final-message {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8em;
+            color: #2c2c2c;
+            margin: 10px 0 15px 0;
+            font-weight: 400;
+            line-height: 1.6;
+            animation: fadeIn 1s ease-in 0.8s both;
         }
 
-        #noBtn:hover {
-            background: linear-gradient(135deg, #c9a27a 0%, #d4a574 100%);
-            transform: scale(1.05);
+        .final-submessage {
+            font-size: 1em;
+            color: #888;
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in 1.2s both;
         }
 
-        .hearts {
+        /* Falling petals */
+        .falling-petals {
             position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             pointer-events: none;
             z-index: 9999;
         }
 
-        .heart {
+        .petal {
             position: absolute;
-            font-size: 40px;
-            animation: float 4s ease-in-out;
+            animation: fall linear;
             opacity: 0;
-            filter: drop-shadow(0 0 10px rgba(255, 99, 72, 0.6));
         }
 
-        @keyframes float {
+        @keyframes fall {
             0% {
-                opacity: 1;
-                transform: translateY(0) rotate(0deg) scale(0);
+                opacity: 0;
+                transform: translateY(-100px) rotate(0deg);
             }
-            50% {
-                opacity: 1;
-                transform: translateY(-100px) rotate(180deg) scale(1.2);
+            10% {
+                opacity: 0.8;
+            }
+            90% {
+                opacity: 0.8;
             }
             100% {
                 opacity: 0;
-                transform: translateY(-250px) rotate(360deg) scale(0.5);
-            }
-        }
-
-        .confetti {
-            position: fixed;
-            width: 12px;
-            height: 12px;
-            background: #ff6348;
-            animation: confetti-fall 4s linear;
-            border-radius: 50%;
-        }
-
-        @keyframes confetti-fall {
-            0% {
-                opacity: 1;
-            }
-            100% {
                 transform: translateY(100vh) rotate(720deg);
-                opacity: 0;
             }
         }
 
-        /* Success state */
-        .success-container {
-            animation: celebrate 0.8s ease-out;
-        }
-
-        @keyframes celebrate {
-            0%, 100% { transform: scale(1); }
-            25% { transform: scale(1.1) rotate(-5deg); }
-            75% { transform: scale(1.1) rotate(5deg); }
-        }
-
-        /* Whiskers */
-        .whisker {
-            position: absolute;
-            width: 80px;
-            height: 2px;
-            background: #8b4513;
-            opacity: 0.4;
-        }
-
-        .whisker.left-top {
-            left: -70px;
-            top: 35%;
-            transform: rotate(-15deg);
-        }
-
-        .whisker.left-middle {
-            left: -70px;
-            top: 45%;
-        }
-
-        .whisker.left-bottom {
-            left: -70px;
-            top: 55%;
-            transform: rotate(15deg);
-        }
-
-        .whisker.right-top {
-            right: -70px;
-            top: 35%;
-            transform: rotate(15deg);
-        }
-
-        .whisker.right-middle {
-            right: -70px;
-            top: 45%;
-        }
-
-        .whisker.right-bottom {
-            right: -70px;
-            top: 55%;
-            transform: rotate(-15deg);
-        }
-
-        /* Responsive design */
+        /* Responsive */
         @media (max-width: 600px) {
             h1 {
-                font-size: 2em;
+                font-size: 2.2em;
             }
 
-            .cat-gif {
-                width: 250px;
-                height: 250px;
+            .container {
+                padding: 40px 25px 30px 25px;
+            }
+
+            .flower-display {
+                min-height: 250px;
+            }
+
+            .bouquet-container {
+                height: 350px;
             }
 
             button {
-                font-size: 1.3em;
-                padding: 15px 35px;
+                font-size: 1em;
+                padding: 16px 32px;
             }
 
-            .cat-ear {
-                display: none;
-            }
-
-            .whisker {
-                display: none;
+            .final-message {
+                font-size: 1.5em;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Background floating paws -->
-    <div class="bg-paws" id="bgPaws"></div>
+    <div class="container" id="mainContainer">
+        <h1 id="title">Happy Valentine's Day</h1>
+        <p class="subtitle" id="subtitle">Pick your favorite flower cutiii</p>
 
-    <div class="container">
-        <!-- Cat ears -->
-        <div class="cat-ear left"></div>
-        <div class="cat-ear right"></div>
-
-        <!-- Whiskers -->
-        <div class="whisker left-top"></div>
-        <div class="whisker left-middle"></div>
-        <div class="whisker left-bottom"></div>
-        <div class="whisker right-top"></div>
-        <div class="whisker right-middle"></div>
-        <div class="whisker right-bottom"></div>
-
-        <h1 id="question">Cutiiiii Will You Be My Valentine? 💕</h1>
-
-        <div class="cat-gif-container">
-            <span class="paw">🐾</span>
-            <span class="paw">🐾</span>
-            <span class="paw">🐾</span>
-            <span class="paw">🐾</span>
-            <img id="catGif" class="cat-gif" src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="Cute cat">
+        <div class="flower-display" id="flowerDisplay">
+            <!-- Initial rotating flower will be inserted here -->
         </div>
+        <p class="question" id="question"></p>
 
         <div class="buttons" id="buttonContainer">
-            <button id="yesBtn">Yes!</button>
-            <button id="noBtn">No</button>
+            <button onclick="selectFlower('Rose', 'rose')">Roses</button>
+            <button onclick="selectFlower('Lily', 'lily')">Lilies</button>
+            <button onclick="selectFlower('Lotus', 'lotus')">Lotus</button>
         </div>
+
     </div>
 
-    <div class="hearts" id="hearts"></div>
+    <div class="falling-petals" id="fallingPetals"></div>
 
     <script>
-        const catGifs = [
-        'https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmJtMWg5djUwdGMzaWY3Z3dkMDZlbDQwOXA4Z2dwZXF5ZjkyZ2VkdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Zl7u48zLVFgLpRwq6f/giphy.gif',
-            'https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif',
-            'https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2s5YXRpMHlrZW5yY2N1bms5OGhnbGR1a2NremJ6d3RqY2E4aG1raiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kKeJ4JuNkaEZbkPOOL/giphy.gif',
-            'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGtyZnkwb2N6dHFqZm5xa2F4MHR2Z2VzdmZrZnJ5ZW1mcTJuMWF6ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/H4DjXQXamtTiIuCcRU/giphy.gif',
-            'https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif',
-            'https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif'
-        ];
-
-        const sadCatGifs = [
-            'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2wwcXZpNG42dXh5YjR0Z2U0OWZua2UzbDExbnNrZjdoZ20yb2pnbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fFa05KbZowXiEIyRse/giphy.gif',
-            'https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHc0dXIzdWF3aWlqN3A5cXVxdnM2MGE0aWNtbDN3bTMweGpib2JibCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mi4ec226vjAkehSLk0/giphy.gif',
-            'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnIyY3h1bzI2dng5aHVid2NyZTZ5dTdnbmlpcWdkaWI1dDF3a2xmYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fYLrVmLXG9tVL4Aykg/giphy.gif',
-            'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGFrb3h6eDNtNTlwamN3cWZ5OHZhMGhiem42d2x1aGJxbnF4ZG83NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ruyS8Zw9sBqE5UjOnY/giphy.gif',
-            'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHN3d3RoY29zM2J5bHJ3dDR4ZDZ1YjdiOHp1MTllMnE3OGU4cXFrYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OBNZCbTy1s8u8i7Wre/giphy.gif',
-            'https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmYwenV0Z2Q2cncydm1wbnFpMTBmNHBidndhZDdoZmlyOHEzM3ZybSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7AzEXdIb1wyCTWJntb/giphy.gif',
-            'https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzN2M281aWg1Y3NqYW41cGtsdGd5bzE5emFwZnA4OGk0NWIzZmNhZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sLkIthus9lEwoe7PRx/giphy.gif',
-            'https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2R1ejUxamcxNXNqMXJrNG50NTQ5eDl1dnl3dm9jaDVtazBkdDN1aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PcwpnqpwAfRK/giphy.gif',
-            'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmdtYW1oeWx1czdlb3A5NHd4NmdrbmI1NWRjZXN1ejdxYTFsd2UydyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xqIyNcR4BUS3u/giphy.gif'
-        ];
-
-        const happyCatGifs = [
-            'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXFyNHZ3aHM0b2JvdTRyZDNzbXg1Y2o4Y2d2bXo0cW5jYzNsYXV6ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/T70hpBP1L0N7U0jtkq/giphy.gif'
-        ];
-
-        const kissingCatgif=['https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaG51ZG10NWUxOG8ydm1yeTNsYmdiOTQ2MzQ5MTZhYWpkN2pncWhxaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/16OzPTMlBMiH6Yze1n/giphy.gif']
-
-        // Custom text to show when Meow ("Love you") is clicked. Change this to any text you want.
-        const meowText = "I love you too Cutiii pie! 😽";
-
-
-        const yesBtn = document.getElementById('yesBtn');
-        const noBtn = document.getElementById('noBtn');
-        const catGif = document.getElementById('catGif');
+        let selectedFlower = '';
+        let selectedFlowerName = '';
+        const flowerDisplay = document.getElementById('flowerDisplay');
         const question = document.getElementById('question');
         const buttonContainer = document.getElementById('buttonContainer');
-        const container = document.querySelector('.container');
+        const title = document.getElementById('title');
+        const subtitle = document.getElementById('subtitle');
 
-        let noClickCount = 0;
-        const noMessages = [
-            "No ah ? 🥺",
-            "Pichi cutuuu ? Yes chepava 😿",
-            "Enduku nen odda neeku ?! 🐱",
-            "Na cutuuu baby kada we will go on dateeee ??? 🌿",
-            "we will do chitii chitii stuff and eat chala fooood? 💝",
-            "nak telvadu inka yes chepali anthe... 😭",
-            "nen alari chestha yes chepakunte",
-            "ha choostha ipud no ela chepthavo lalalallala",
-            ""
-        ];
+        // SVG flower templates
+        const flowerSVGs = {
+            rose: (size = 120, color = '#e63946') => `
+                <svg width="${size}" height="${size}" viewBox="0 0 100 100" class="single-flower">
+                    <g>
+                        <!-- Stem -->
+                        <line x1="50" y1="60" x2="50" y2="95" stroke="#2d6a4f" stroke-width="3" />
+                        <!-- Leaves -->
+                        <ellipse cx="45" cy="75" rx="8" ry="12" fill="#52b788" transform="rotate(-30 45 75)" />
+                        <ellipse cx="55" cy="80" rx="8" ry="12" fill="#52b788" transform="rotate(30 55 80)" />
+                        <!-- Petals -->
+                        <circle cx="50" cy="50" r="20" fill="${color}" opacity="0.7" />
+                        <circle cx="38" cy="45" r="15" fill="${color}" opacity="0.8" />
+                        <circle cx="62" cy="45" r="15" fill="${color}" opacity="0.8" />
+                        <circle cx="44" cy="58" r="14" fill="${color}" opacity="0.75" />
+                        <circle cx="56" cy="58" r="14" fill="${color}" opacity="0.75" />
+                        <circle cx="50" cy="42" r="16" fill="${color}" />
+                        <!-- Center -->
+                        <circle cx="50" cy="50" r="8" fill="#ffb703" />
+                    </g>
+                </svg>
+            `,
+            lily: (size = 120, color = '#ff69b4') => `
+                <svg width="${size}" height="${size}" viewBox="0 0 100 100" class="single-flower">
+                    <g>
+                        <!-- Stem -->
+                        <line x1="50" y1="55" x2="50" y2="95" stroke="#2d6a4f" stroke-width="3" />
+                        <!-- Leaf -->
+                        <ellipse cx="42" cy="70" rx="6" ry="15" fill="#52b788" transform="rotate(-20 42 70)" />
+                        <!-- Petals -->
+                        <ellipse cx="50" cy="35" rx="8" ry="22" fill="${color}" />
+                        <ellipse cx="50" cy="35" rx="8" ry="22" fill="${color}" transform="rotate(60 50 45)" />
+                        <ellipse cx="50" cy="35" rx="8" ry="22" fill="${color}" transform="rotate(120 50 45)" />
+                        <ellipse cx="50" cy="35" rx="8" ry="22" fill="${color}" transform="rotate(180 50 45)" />
+                        <ellipse cx="50" cy="35" rx="8" ry="22" fill="${color}" transform="rotate(240 50 45)" />
+                        <ellipse cx="50" cy="35" rx="8" ry="22" fill="${color}" transform="rotate(300 50 45)" />
+                        <!-- Center -->
+                        <circle cx="50" cy="45" r="5" fill="#ffd60a" />
+                        <line x1="50" y1="45" x2="50" y2="52" stroke="#8d5524" stroke-width="1" />
+                        <line x1="48" y1="45" x2="48" y2="52" stroke="#8d5524" stroke-width="1" />
+                        <line x1="52" y1="45" x2="52" y2="52" stroke="#8d5524" stroke-width="1" />
+                    </g>
+                </svg>
+            `,
+            lotus: (size = 120, color = '#f77fbe') => `
+                <svg width="${size}" height="${size}" viewBox="0 0 100 100" class="single-flower">
+                    <g>
+                        <!-- Stem -->
+                        <line x1="50" y1="65" x2="50" y2="95" stroke="#2d6a4f" stroke-width="3" />
+                        <!-- Outer petals -->
+                        <ellipse cx="50" cy="50" rx="12" ry="20" fill="${color}" opacity="0.7" />
+                        <ellipse cx="50" cy="50" rx="12" ry="20" fill="${color}" opacity="0.7" transform="rotate(45 50 50)" />
+                        <ellipse cx="50" cy="50" rx="12" ry="20" fill="${color}" opacity="0.7" transform="rotate(90 50 50)" />
+                        <ellipse cx="50" cy="50" rx="12" ry="20" fill="${color}" opacity="0.7" transform="rotate(135 50 50)" />
+                        <!-- Inner petals -->
+                        <ellipse cx="50" cy="50" rx="10" ry="16" fill="${color}" transform="rotate(22.5 50 50)" />
+                        <ellipse cx="50" cy="50" rx="10" ry="16" fill="${color}" transform="rotate(67.5 50 50)" />
+                        <ellipse cx="50" cy="50" rx="10" ry="16" fill="${color}" transform="rotate(112.5 50 50)" />
+                        <ellipse cx="50" cy="50" rx="10" ry="16" fill="${color}" transform="rotate(157.5 50 50)" />
+                        <!-- Center -->
+                        <circle cx="50" cy="50" r="8" fill="#ffd60a" />
+                        <circle cx="50" cy="50" r="5" fill="#ffb703" />
+                    </g>
+                </svg>
+            `
+        };
 
-        // Create background paw prints
-        function createBackgroundPaws() {
-            const bgPaws = document.getElementById('bgPaws');
-            for (let i = 0; i < 20; i++) {
-                const paw = document.createElement('div');
-                paw.className = 'bg-paw';
-                paw.innerHTML = '🐾';
-                paw.style.left = Math.random() * 100 + '%';
-                paw.style.top = Math.random() * 100 + '%';
-                paw.style.animationDelay = Math.random() * 10 + 's';
-                paw.style.transform = `rotate(${Math.random() * 360}deg)`;
-                bgPaws.appendChild(paw);
-            }
+        // Petal SVG for falling animation
+        const petalSVG = (color) => `
+            <svg width="20" height="25" viewBox="0 0 20 25">
+                <ellipse cx="10" cy="12" rx="8" ry="12" fill="${color}" opacity="0.8" />
+            </svg>
+        `;
+
+        function selectFlower(name, type) {
+            selectedFlower = type;
+            selectedFlowerName = name;
+
+            // Show selected flower
+            const colors = {
+                rose: '#e63946',
+                lily: '#ff69b4',
+                lotus: '#f77fbe'
+            };
+            flowerDisplay.innerHTML = flowerSVGs[type](150, colors[type]);
+
+            title.innerHTML = 'Beautiful choice!';
+            subtitle.innerHTML = '';
+            question.innerHTML = `Enni ${name.toLowerCase()} flowers kavali cutuu ?`;
+
+            buttonContainer.innerHTML = `
+                <button onclick="giveOne()">Okati chalu le</button>
+                <button onclick="giveBouquet()">Neee istam</button>
+            `;
         }
-        createBackgroundPaws();
 
-        yesBtn.addEventListener('click', function() {
-            question.innerHTML = "Yay! Chitiii cutuu yes chepindi 💖🎉";
-            catGif.src = happyCatGifs[Math.floor(Math.random() * happyCatGifs.length)];
-            // Insert a Meow button with an id so we can attach a listener
-            buttonContainer.innerHTML = '<button id="meowBtn" style="background: linear-gradient(135deg, #ff6348 0%, #ff9068 100%); color: white; font-size: 1.8em; padding: 20px 60px; border: none; border-radius: 60px; cursor: pointer; font-weight: 700; box-shadow: 0 10px 30px rgba(255, 99, 72, 0.5); animation: celebrate 0.8s ease-out;">😻 Meow! Love you! 😻</button>';
+        function giveOne() {
+            title.innerHTML = 'Wait...';
+            subtitle.innerHTML = 'Allll for my cutuuu pie onlyyy';
+            question.innerHTML = '';
+            buttonContainer.innerHTML = '';
 
-            // Attach click listener to the newly inserted Meow button
-            const meowBtn = document.getElementById('meowBtn');
-            if (meowBtn) {
-                meowBtn.addEventListener('click', () => {
-                    // Show the kissing cat gif, set custom text, and remove the buttons
-                    question.innerHTML = meowText;
-                    catGif.src = kissingCatgif[0];
-                    buttonContainer.innerHTML = '';
-                });
-            }
+            setTimeout(() => {
+                giveBouquet();
+            }, 1500);
+        }
 
-            container.classList.add('success-container');
-            createHearts();
-            createConfetti();
-        });
+        function giveBouquet() {
+            title.innerHTML = 'Neeekosame';
+            subtitle.innerHTML = '';
+            question.innerHTML = '';
+            buttonContainer.innerHTML = '';
 
-        noBtn.addEventListener('click', function() {
-            noClickCount++;
+            // Create beautiful bouquet
+            const bouquetHTML = `
+                <div class="bouquet-container">
+                    <div class="bouquet-wrapper">
+                        <div class="flowers-cluster">
+                            <!-- Front row -->
+                            ${createFlower('rose', 0, -20, 0, '#e63946', 100)}
+                            ${createFlower('lily', -60, -10, 0.1, '#ff69b4', 90)}
+                            ${createFlower('lotus', 60, -10, 0.2, '#f77fbe', 90)}
+                            <!-- Second row -->
+                            ${createFlower('rose', -30, 0, 0.3, '#ff006e', 95)}
+                            ${createFlower('lotus', 30, 0, 0.4, '#ff66c4', 95)}
+                            <!-- Back row -->
+                            ${createFlower('lily', -45, 15, 0.5, '#ffb3d9', 85)}
+                            ${createFlower('rose', 45, 15, 0.6, '#ff1744', 85)}
+                            ${createFlower('lotus', 0, 20, 0.7, '#ff80ab', 80)}
+                            <!-- Extra flowers -->
+                            ${createFlower('lily', -75, 10, 0.8, '#f48fb1', 75)}
+                            ${createFlower('rose', 75, 10, 0.9, '#ff5252', 75)}
+                        </div>
+                        <div class="ribbon"></div>
+                        <div class="bouquet-wrap"></div>
+                    </div>
+                </div>
+                <div class="final-message">
+                    You deserve all the flowers in the world ! Thank you for always staying by my side, supporting me in every step 💕
+                    I can't imagine a life without you. My wifey, my bestest friend, my love of my life.
+                </div>
+                <div class="final-submessage">
+                    Happy Valentine's Day, cutie ! 🌹
+                </div>
+            `;
 
-            if (noClickCount < noMessages.length) {
-                question.innerHTML = noMessages[noClickCount - 1];
-                catGif.src = sadCatGifs[Math.floor(Math.random() * sadCatGifs.length)];
+            flowerDisplay.innerHTML = bouquetHTML;
 
-                // Make Yes button bigger and No button smaller
-                yesBtn.style.fontSize = (1.6 + noClickCount * 0.35) + 'em';
-                yesBtn.style.padding = (18 + noClickCount * 6) + 'px ' + (50 + noClickCount * 12) + 'px';
-                noBtn.style.fontSize = Math.max(0.8, 1.6 - noClickCount * 0.25) + 'em';
-                noBtn.style.padding = Math.max(5, 18 - noClickCount * 2.5) + 'px ' + Math.max(10, 50 - noClickCount * 7) + 'px';
-            } else {
-                // If they keep saying no, make the No button run away
-                const x = Math.random() * (window.innerWidth - 200);
-                const y = Math.random() * (window.innerHeight - 100);
-                noBtn.style.position = 'fixed';
-                noBtn.style.left = x + 'px';
-                noBtn.style.top = y + 'px';
-                noBtn.style.zIndex = '9999';
-            }
-        });
+            // Start falling petals
+            setTimeout(() => {
+                startFallingPetals();
+            }, 500);
+        }
 
-        function createHearts() {
-            const heartsContainer = document.getElementById('hearts');
-            for (let i = 0; i < 40; i++) {
+        function createFlower(type, x, y, delay, color, size) {
+            return `
+                <div class="flower" style="left: calc(50% + ${x}px); transform: translateX(-50%); bottom: ${150 - y}px; animation-delay: ${delay}s;">
+                    ${flowerSVGs[type](size, color)}
+                </div>
+            `;
+        }
+
+        function startFallingPetals() {
+            const container = document.getElementById('fallingPetals');
+            const colors = ['#e63946', '#ff69b4', '#f77fbe', '#ff006e', '#ffb3d9', '#ff80ab'];
+
+            for (let i = 0; i < 60; i++) {
                 setTimeout(() => {
-                    const heart = document.createElement('div');
-                    heart.className = 'heart';
-                    const heartSymbols = ['🐾', '🐱', '😻', '💕', '🧡'];
-                    heart.innerHTML = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
-                    heart.style.left = Math.random() * window.innerWidth + 'px';
-                    heart.style.top = window.innerHeight + 'px';
-                    heartsContainer.appendChild(heart);
+                    const petal = document.createElement('div');
+                    petal.className = 'petal';
+                    petal.innerHTML = petalSVG(colors[Math.floor(Math.random() * colors.length)]);
+                    petal.style.left = Math.random() * 100 + '%';
+                    petal.style.animationDuration = (Math.random() * 3 + 4) + 's';
+                    petal.style.animationDelay = (Math.random() * 0.5) + 's';
+                    container.appendChild(petal);
 
-                    setTimeout(() => heart.remove(), 4000);
-                }, i * 80);
+                    setTimeout(() => petal.remove(), 8000);
+                }, i * 100);
             }
         }
 
-        function createConfetti() {
-            const colors = ['#ff6348', '#ff9068', '#ffeaa7', '#d4a574', '#fab1a0'];
-            for (let i = 0; i < 80; i++) {
-                setTimeout(() => {
-                    const confetti = document.createElement('div');
-                    confetti.className = 'confetti';
-                    confetti.style.left = Math.random() * window.innerWidth + 'px';
-                    confetti.style.top = '-20px';
-                    confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
-                    confetti.style.width = (Math.random() * 8 + 8) + 'px';
-                    confetti.style.height = (Math.random() * 8 + 8) + 'px';
-                    document.body.appendChild(confetti);
+        // Initial rotating flower display
+        const flowerTypes = ['rose', 'lily', 'lotus'];
+        const flowerColors = ['#e63946', '#ff69b4', '#f77fbe'];
+        let currentIndex = 0;
 
-                    setTimeout(() => confetti.remove(), 4000);
-                }, i * 40);
+        function updateInitialFlower() {
+            if (selectedFlower === '') {
+                flowerDisplay.innerHTML = flowerSVGs[flowerTypes[currentIndex]](140, flowerColors[currentIndex]);
+                currentIndex = (currentIndex + 1) % flowerTypes.length;
             }
         }
 
-        // Change cat gif every 3 seconds
-        setInterval(() => {
-            if (question.innerHTML === "Cutiiiii Will You Be My Valentine? 💕") {
-                catGif.src = catGifs[Math.floor(Math.random() * catGifs.length)];
-            }
-        }, 3000);
+        // Show first flower immediately
+        updateInitialFlower();
+
+        // Then rotate
+        setInterval(updateInitialFlower, 2500);
     </script>
 </body>
 </html>
