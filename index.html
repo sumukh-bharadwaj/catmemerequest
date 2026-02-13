@@ -430,8 +430,8 @@
                     <circle cx="10" cy="15" r="5" fill="${color}" opacity="0.8" />
                     <!-- Center -->
                     <circle cx="15" cy="15" r="3" fill="${color}" />
-                    <!-- Stem -->
-                    <line x1="15" y1="20" x2="15" y2="28" stroke="#2d6a4f" stroke-width="2" />
+<!--                    &lt;!&ndash; Stem &ndash;&gt;-->
+<!--                    <line x1="15" y1="20" x2="15" y2="28" stroke="#2d6a4f" stroke-width="2" />-->
                 </g>
             </svg>
         `;
@@ -526,8 +526,17 @@
 
         function startFallingPetals() {
             const container = document.getElementById('fallingPetals');
-            const colors = ['#52b788', '#40916c', '#2d6a4f', '#74c69d', '#95d5b2', '#b7e4c7'];
-
+            const colors = [
+                '#ffb3ba',  // bright soft pink
+                '#ffcccc',  // light pink gold
+                '#ffd4d4',  // pale rose gold
+                '#ffe0e0',  // very light pink gold
+                '#ffc8d3',  // bright light pink
+                '#ffd9e3',  // soft blush pink
+                '#ffb399',  // bright peach orange
+                '#ffc9a8',  // light peachy orange
+                '#ffd4b3',  // pale apricot orange
+            ];
             for (let i = 0; i < 60; i++) {
                 setTimeout(() => {
                     const petal = document.createElement('div');
